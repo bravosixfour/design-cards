@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>de/singularity — Design Card Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500&family=JetBrains+Mono:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --white: #f0f0f0;
+            --gray-300: #a3a3a3;
+            --gray-400: #737373;
+            --gray-500: #525252;
+            --gray-600: #404040;
+            --gray-700: #262626;
+            --gray-800: #171717;
+            --paprika: #C4705C;
+            --font-display: 'Funnel Display', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --font-phi: 'IBM Plex Mono', monospace;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: var(--black);
+            color: var(--white);
+            font-family: var(--font-mono);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .header {
+            margin-bottom: 80px;
+        }
+
+        .logo {
+            margin-bottom: 24px;
+        }
+
+        .logo svg { display: block; }
+
+        .slogan {
+            font-family: var(--font-phi);
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: var(--gray-400);
+            text-transform: uppercase;
+        }
+
+        .slogan .slash { color: var(--paprika); margin: 0 2px; }
+        .slogan .double-slash { color: var(--gray-500); margin: 0 2px; }
+
+        .title {
+            font-family: var(--font-display);
+            font-size: clamp(40px, 6vw, 72px);
+            font-weight: 300;
+            letter-spacing: -1px;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            font-size: 13px;
+            color: var(--gray-400);
+            letter-spacing: 1px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 24px;
+        }
+
+        .card-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid var(--gray-700);
+            padding: 32px;
+            transition: border-color 0.3s, background 0.3s;
+        }
+
+        .card-link:hover {
+            border-color: var(--gray-500);
+            background: var(--gray-800);
+        }
+
+        .card-type {
+            font-family: var(--font-phi);
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--paprika);
+            margin-bottom: 16px;
+        }
+
+        .card-type.material { color: #8B7ED8; }
+        .card-type.term { color: var(--gray-300); }
+
+        .card-name {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 8px;
+        }
+
+        .card-desc {
+            font-size: 12px;
+            color: var(--gray-400);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 24px;
+            font-size: 11px;
+            color: var(--gray-500);
+        }
+
+        .card-meta span { white-space: nowrap; }
+
+        .footer {
+            margin-top: 120px;
+            padding-top: 40px;
+            border-top: 1px solid var(--gray-700);
+            font-size: 11px;
+            color: var(--gray-500);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 40px 20px; }
+            .card-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <svg viewBox="0 0 520 110" width="280" height="60">
+                    <text x="0" y="60" font-family="Funnel Display, sans-serif" font-size="56" font-weight="300" letter-spacing="2" fill="#f0f0f0">de</text>
+                    <g transform="translate(82, 70) rotate(-70)">
+                        <text font-family="IBM Plex Mono, monospace" font-size="7.5" font-weight="500" fill="#a3a3a3" letter-spacing="2">1.6180339</text>
+                    </g>
+                    <text x="118" y="60" font-family="Funnel Display, sans-serif" font-size="56" font-weight="300" letter-spacing="2" fill="#f0f0f0">singularity</text>
+                </svg>
+                <p class="slogan">DESIGN INTELLIGENCE<span class="slash">/</span> FROM FIRST PRINCIPLES<span class="double-slash">//</span></p>
+            </div>
+            <h1 class="title">Design Card Collection</h1>
+            <p class="subtitle">7 cards across 3 types — DESIGN / MATERIAL / TERM</p>
+        </header>
+
+        <div class="card-grid">
+            <a href="parisian-haussmann/index.html" class="card-link">
+                <div class="card-type">Design Card</div>
+                <div class="card-name">Parisian Haussmann Contemporary Dining</div>
+                <div class="card-desc">Sculptural bouclé chairs in a formal Haussmann dining room — temporal bridge composition between 19th-century architecture and contemporary furniture.</div>
+                <div class="card-meta">
+                    <span>25 Directions</span>
+                    <span>8 Levels</span>
+                    <span>v3.0</span>
+                </div>
+            </a>
+
+            <a href="super-white/index.html" class="card-link">
+                <div class="card-type material">Material Card</div>
+                <div class="card-name">Super White Dolomite</div>
+                <div class="card-desc">Dolomitic marble with white-to-light-gray ground, bold dark gray breccia veining and quartz-filled fractures. Premium natural stone.</div>
+                <div class="card-meta">
+                    <span>25 Directions</span>
+                    <span>Confidence 0.95</span>
+                    <span>v5.0</span>
+                </div>
+            </a>
+
+            <a href="portuguese-viola-marble/index.html" class="card-link">
+                <div class="card-type material">Material Card</div>
+                <div class="card-name">Portuguese Viola Marble</div>
+                <div class="card-desc">Distinctive purple-toned marble from Portugal with unique veining patterns. Category: material.stone.marble.</div>
+                <div class="card-meta">
+                    <span>25 Directions</span>
+                    <span>Confidence 0.94</span>
+                    <span>v5.0</span>
+                </div>
+            </a>
+
+            <a href="timber-flooring/index.html" class="card-link">
+                <div class="card-type term">Term Card</div>
+                <div class="card-name">Timber Flooring</div>
+                <div class="card-desc">Complete term definition covering species, grading, cuts, installation methods, and design principles for timber flooring.</div>
+                <div class="card-meta">
+                    <span>19 Directions</span>
+                    <span>15 Sections</span>
+                    <span>v6.0</span>
+                </div>
+            </a>
+
+            <a href="bathroom-sink/index.html" class="card-link">
+                <div class="card-type term">Term Card</div>
+                <div class="card-name">Bathroom Sink</div>
+                <div class="card-desc">Complete category definition with 20 first-principles-derived directions covering mounting types, materials, and design principles.</div>
+                <div class="card-meta">
+                    <span>20 Directions</span>
+                    <span>Confidence 0.96</span>
+                    <span>14 Sections</span>
+                </div>
+            </a>
+
+            <a href="shadow-box-panels/index.html" class="card-link">
+                <div class="card-type term">Term Card</div>
+                <div class="card-name">Shadow Box Panels</div>
+                <div class="card-desc">Architectural wall treatment term card covering profiles, types, style compatibility, and complete de/ syntax encoding.</div>
+                <div class="card-meta">
+                    <span>18 Directions</span>
+                    <span>14 Sections</span>
+                    <span>v4.0</span>
+                </div>
+            </a>
+
+            <a href="cornice/index.html" class="card-link">
+                <div class="card-type term">Term Card</div>
+                <div class="card-name">Cornice</div>
+                <div class="card-desc">Architectural element term card with profiles, types, material options, and complete DNA chain encoding in de/ syntax.</div>
+                <div class="card-meta">
+                    <span>17 Directions</span>
+                    <span>14 Sections</span>
+                    <span>v4.0</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="footer">
+            de/singularity Design Card System v2.0 — 7 Cards — February 2026
+        </div>
+    </div>
+</body>
+</html>
